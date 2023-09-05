@@ -9,5 +9,123 @@
 .inner {
     height: 100%;
     width: var(--default-layout-width);
-    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search,
+.search-result {
+    width: 361px;
+}
+.search {
+    position: relative;
+    width: 361px;
+    height: 46px;
+    padding: 0 0 0 16px;
+    background-color: rgb(242, 241, 241);
+    border-radius: 92px;
+    display: flex;
+    border: 1.5px solid transparent;
+
+    input {
+        flex: 1;
+        height: 100%;
+        color: #4b4b4b;
+        font-size: 1.6rem;
+        border: none;
+        background-color: transparent;
+        outline: none;
+    }
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 28px;
+        background-color: #b7b7b7;
+        top: 9px;
+        right: 52px;
+    }
+
+    &:focus-within {
+        border: 1.5px solid #b7b7b7;
+    }
+}
+
+.search-title {
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.clear,
+.loading {
+    position: absolute;
+    right: calc(72px - 14px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b7b7b7;
+}
+
+.search-btn {
+    width: 52px;
+    height: 100%;
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    font-size: 1.8rem;
+    color: rgb(202, 202, 202);
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(237, 237, 237);
+        color: rgb(144, 144, 144);
+    }
+    &:active {
+        background-color: rgb(234, 233, 233);
+    }
+}
+
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+
+a[href] {
+    color: #333;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+}
+
+.action-btn {
+    background-color: transparent;
+    font-size: 2.2rem;
+    color: #161823;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 28px;
+    padding: 4px 8px;
+    background-color: transparent;
+    cursor: pointer;
 }

@@ -1,0 +1,58 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+.icon {
+    display: inline-block;
+    width: 20px;
+}
+.primary {
+    background-color: rgb(211, 40, 71);
+    color: #fff;
+
+    &:hover {
+        background-color: rgb(232, 98, 123);
+    }
+}
+
+.outline {
+    border-color: rgb(211, 40, 71);
+    color: rgb(211, 40, 71);
+
+    &:hover {
+        background-color: rgb(251, 234, 236);
+    }
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.small {
+    min-width: 88px;
+    padding: 6px 16px;
+}
+
+.large {
+    min-width: 136px;
+    padding: 12px 20px;
+}
